@@ -85,6 +85,7 @@ function buscardatosHistoricos() {
     parserHistorico(llamar('http://anterior.inta.gov.ar/altovalle/met/downld02.txt'));
     //alert(semaforo());
     //alert('Temperatura='+temperatura+'\n Humedad='+humedad);
+    document.getElementById('main').style.display = 'block';
     document.getElementById('main').innerHTML = 'T: ' + temperatura +
             'ºC <br/>H: ' + humedad + '%<br/>V: ' + viento + 'km/h<br/>pp: ' + lluvia + 'mm';
     //color = semaforo();
@@ -219,3 +220,6 @@ function semaforo() {
     return valor;
 
 }
+
+
+
