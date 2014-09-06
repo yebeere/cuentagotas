@@ -105,3 +105,31 @@ margin: .8em 30% .8em;
 .ui-icon-ms-search {
     background: url("../img/search-icon.png") 50% 50% no-repeat;
 }
+#main {
+	width: 95%;
+	background: rgba(61, 148, 0, 0.6);
+	color: white;
+	margin-left: auto;
+	padding: 10px;
+	font-family: 'Satisfy', cursive;
+	/*display: none;*/
+	font-size: 3.2em;
+}
+#boton {
+	height: 60px;
+	width: 90%;
+	line-height: 60px;
+	background-color: #dd4b39; 
+	margin-left : auto;
+	margin-right: auto;
+	/*background-image: url('../images/bg.png');*/
+	font-size: 2em;
+	-moz-box-shadow: 3px 3px 5px 6px #ccc;
+	-webkit-box-shadow: 3px 3px 5px 6px #ccc;
+	box-shadow: 3px 3px 5px 6px #ccc;
+	cursor: pointer;
+	color: white;
+	margin-top:1%;
+	margin-bottom:1%;
+	text-align:center;
+}
