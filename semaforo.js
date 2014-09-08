@@ -86,7 +86,7 @@ function buscardatosHistoricos() {
     //alert(semaforo());
     //alert('Temperatura='+temperatura+'\n Humedad='+humedad);
     document.getElementById('main').style.display = 'block';
-    document.getElementById('main').innerHTML = 'Fecha: '+fecha+'<br/>Hora: '+hora+'<br/>T: ' + temperatura +
+    document.getElementById('main').innerHTML = 'Fecha: '+fecha+'<br/>Hora: '+hora+'<br>T: ' + temperatura +
             'ºC <br/>H: ' + humedad + '%<br/>V: ' + viento + 'km/h<br/>pp: ' + lluvia + 'mm';
     //color = semaforo();
 
