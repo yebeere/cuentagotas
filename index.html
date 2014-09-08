@@ -13,20 +13,24 @@
     
     <script type="text/javascript" src="semaforo.js"></script>
     <script type="text/javascript">
+         document.addEventListener("deviceready", onDeviceReady, false);
+         function onDeviceReady() {
+            // Register the event listener
+            document.addEventListener("offline", isOffline, false);
+             buscardatosHistoricos();
+           }
+            // Handle the online event
+            //
+        function isOffline() {
+                alert ('Su dispositivo móvil esta fuera de línea');
+            }        
               
-                function onLoad() {
-                        document.addEventListener("deviceready", onDeviceReady, false);
-                        }
-                // PhoneGap is ready
-                //
-                function onDeviceReady() {
-                                  
-                            }
+              
 </script>
 
 </head>
 <body>
-	<input type="button" id="boton" onclick="buscardatosHistoricos()" value="Datos de Guerrico">
+	<!-- <input type="button" id="boton" onclick="buscardatosHistoricos()" value="Datos de Guerrico"> -->
 	<div id="main"></div>
   </body>
 </html>
