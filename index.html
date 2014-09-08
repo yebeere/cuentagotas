@@ -18,8 +18,8 @@
             // Register the event listener
             document.addEventListener("offline", isOffline, false);
              buscardatosHistoricos();
-             var myDiv = document.getElementById('props');
-            myDiv.innerHTML = 'Device Name: '+ device.name + '<br />'+
+             myDiv = document.getElementById('main');
+             myDiv.innerHTML = 'Device Name: '+ device.name + '<br />'+
             'Device PhoneGap: ' + device.phonegap + '<br />' +
             'Device Platform: ' + device.platform + '<br />' +
             'Device UUID: ' + device.uuid + '<br />' +
