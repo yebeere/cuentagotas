@@ -69,11 +69,11 @@ function distance(lat1,lon1,lat2,lon2) {
 //	else if (d<=1) return Math.round(d*1000)+"m";
 	return d;
 }
-  function onSuccessGPS (){
+  var onSuccessGPS = function(position) {
                     var distancia=distance(ema[1][1],ema[1][2],position.coords.latitude,position.coords.longitude)
                     alert('Latitude: ' + position.coords.latitude + '\n' +
                     'Longitude: ' + position.coords.longitude + '\n'+
-                    'Distanncia: '+distancia+' km \n') ;
+                    'Distancia: '+distancia+' km \n') ;
             }
             // onError Callback receives a PositionError object
             //
