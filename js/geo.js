@@ -84,7 +84,7 @@ function ordenGPS(){
 //       }
        //$("#esta option[value=1]").attr("selected",true);
 
-       document.getElementById('resul').innerHTML = ema;         
+       document.getElementById('estaciones').innerHTML = ema;         
 }
 
     
@@ -104,5 +104,6 @@ function ordenGPS(){
 //                        alert('code: ' + error.code + '\n' +
 //                        'message: ' + error.message + '\n');
                          document.getElementById('gps').className = 'estado no';
+                         document.getElementById('estaciones').innerHTML = ema;
                     }
 
