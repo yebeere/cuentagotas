@@ -9,10 +9,7 @@ var viento;
 var lluvia;
 var fecha;
 var hora;
-var mensaje = new Array();
-mensaje['rojo'] = 'Condiciones de Aplicaci�n NO Apropiadas';
-mensaje['amarillo'] = 'Condiciones de Aplicaci�n RESTRINGIDA';
-mensaje['verde'] = 'Condiciones de Aplicaci�n Apropiadas';
+
 
 
 
@@ -31,25 +28,7 @@ function llamar(url) {
 
     return contenido;
 }
-function actualizar(color) {
-    document.getElementById('semaforo').className = 'semaforo ' + color;
-    document.getElementById('mensaje').innerHTML = mensaje[color] + '.';
-    document.getElementById('datos').innerHTML = '(T:' + temperatura +
-            '�C, H:' + humedad + '%, V:' + viento + 'km/h, pp:' + lluvia + 'mm.)';
-}
 
-
-function buscardatos() {
-
-    parser(llamar('wap.htm'));
-    //alert(semaforo());
-
-    color = semaforo();
-
-    actualizar(color);
-
-    return true;
-}
 
 function parser(contenido) {
     ini = contenido.indexOf("T:");
@@ -86,7 +65,7 @@ function buscardatosHistoricos() {
     //alert(semaforo());
     //alert('Temperatura='+temperatura+'\n Humedad='+humedad);
     document.getElementById('main').style.display = 'block';
-    document.getElementById('main').innerHTML = 'Fecha: '+fecha+'<br/>Hora: '+hora+'<br>T: ' + temperatura +
+    document.getElementById('main').innerHTML = 'Hora: '+hora+'<br>T: ' + temperatura +
             'ºC <br/>H: ' + humedad + '%<br/>V: ' + viento + 'km/h<br/>pp: ' + lluvia + 'mm';
     //color = semaforo();
 
