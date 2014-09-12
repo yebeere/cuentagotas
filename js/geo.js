@@ -84,7 +84,7 @@ function ordenGPS(){
        }
        //$("#esta option[value=1]").attr("selected",true);
 
-       //document.getElementById('estaciones').innerHTML = ema;         
+       document.getElementById('resul').innerHTML = ema;         
 }
 
     
