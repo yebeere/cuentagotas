@@ -30,7 +30,8 @@
                function isOnline() {
                    //    alert ('Su dispositivo móvil esta en línea');
                        document.getElementById('net').className = 'estado ok';
-                       navigator.geolocation.getCurrentPosition(onSuccessGPS, onErrorGPS);
+                       var options = {maximumAge: 0, timeout: 10000, enableHighAccuracy:true};
+                       navigator.geolocation.getCurrentPosition(onSuccessGPS, onErrorGPS, options);
                       // buscardatosHistoricos();
                    }
                function resultado(){
@@ -73,7 +74,7 @@
                     <div id="estaciones">
                               <fieldset class="ui-field-contain" data-theme="f" >
                                 <label for="day">Estaciones</label>
-                                <select name="esta" id="esta" onchange="resultado()">
+                                <select name="esta" id="esta" >
                                 </select>
                               </fieldset>
                     </div>
