@@ -71,16 +71,16 @@ function distance(lat1,lon1,lat2,lon2) {
 }
   var onSuccessGPS = function(position) {
                     var distancia=distance(ema[1][1],ema[1][2],position.coords.latitude,position.coords.longitude)
-                    alert('Latitude: ' + position.coords.latitude + '\n' +
-                    'Longitude: ' + position.coords.longitude + '\n'+
-                    'Distancia: '+distancia+' km \n') ;
+//                    alert('Latitude: ' + position.coords.latitude + '\n' +
+//                    'Longitude: ' + position.coords.longitude + '\n'+
+//                    'Distancia: '+distancia+' km \n') ;
                     document.getElementById('gps').className = 'estado ok';
             }
             // onError Callback receives a PositionError object
             //
     function onErrorGPS(error) {
-                        alert('code: ' + error.code + '\n' +
-                        'message: ' + error.message + '\n');
+//                        alert('code: ' + error.code + '\n' +
+//                        'message: ' + error.message + '\n');
                          document.getElementById('gps').className = 'estado no';
                     }
 
