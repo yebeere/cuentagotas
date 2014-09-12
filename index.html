@@ -18,6 +18,7 @@
                    // Register the event listener
                    document.addEventListener("offline", isOffline, false);
                    document.addEventListener("online", isOnline, false);
+                   document.addEventListener("online", isOnline, false);
                    var options = { maximumAge: 5000, timeout: 5000, enableHighAccuracy: true };
 
                     navigator.geolocation.getCurrentPosition(onSuccessGPS, onErrorGPS);
@@ -26,11 +27,11 @@
                    // Handle the online event
                    //
                function isOffline() {
-                       //alert ('Su dispositivo móvil esta fuera de línea');
+                       alert ('Su dispositivo móvil esta fuera de línea');
                        document.getElementById('net').className = 'estado no';
                    }
                function isOnline() {
-                       //alert ('Su dispositivo móvil esta fuera de línea');
+                       alert ('Su dispositivo móvil esta en línea');
                        document.getElementById('net').className = 'estado ok';
                    }
         </script>
