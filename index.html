@@ -16,9 +16,8 @@
                 document.addEventListener("deviceready", onDeviceReady, false);
                 function onDeviceReady() {
                    // Register the event listener
-                   document.addEventListener("offline", isOffline, false);
-                   document.addEventListener("online", isOnline, false);
-                   document.addEventListener("online", isOnline, false);
+                   document.addEventListener("offline", isOffline(), false);
+                   document.addEventListener("online", isOnline(), false);
                    var options = { maximumAge: 5000, timeout: 5000, enableHighAccuracy: true };
 
                     navigator.geolocation.getCurrentPosition(onSuccessGPS, onErrorGPS);
@@ -51,7 +50,7 @@
                     
                     <div id="gps"></div><p>GPS</p>
                     <div id="net"></div><p>Net</p>                   
-
+                    <div id="main"></div>
                     <div id="menu">
                         <a data-icon="flat-heart" data-theme="d" href="#second-page" data-role="button" >Second Page</a>
                    <!--     <a data-icon="flat-time" data-theme="f" href="#due-page"  data-role="button">Fake Btn</a>  -->
