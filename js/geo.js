@@ -79,9 +79,9 @@ function ordenGPS(){
         ema.sort(function(a,b) {
                             return a[5]- b[5];
                 });
-       for (var i = 0; i < 7; i++) {         
-         $("<option value='"+(i+1)+"'>"+ema[i][0]+"</option>").appendTo("#esta"); 
-       }
+//       for (var i = 0; i < 7; i++) {         
+//         $("<option value='"+(i+1)+"'>"+ema[i][0]+"</option>").appendTo("#esta"); 
+//       }
        //$("#esta option[value=1]").attr("selected",true);
 
        document.getElementById('resul').innerHTML = ema;         
