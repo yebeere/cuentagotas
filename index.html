@@ -19,9 +19,8 @@
                    document.addEventListener("offline", isOffline(), false);
                    document.addEventListener("online", isOnline(), false);
                    var options = { maximumAge: 5000, timeout: 5000, enableHighAccuracy: true };
-
                     navigator.geolocation.getCurrentPosition(onSuccessGPS, onErrorGPS);
-                    buscardatosHistoricos();
+                    //buscardatosHistoricos();
                   }
                    // Handle the online event
                    //
@@ -32,6 +31,7 @@
                function isOnline() {
                    //    alert ('Su dispositivo móvil esta en línea');
                        document.getElementById('net').className = 'estado ok';
+                       buscardatosHistoricos();
                    }
         </script>
         <title>CuentaGOTAS</title>
@@ -61,13 +61,13 @@
                        <div id="net"></div></td></tr>
                     <tr>
                     <td align="left" valign="top">Datos:</td> <td>                 
-                    <div id="main">a</div>
+                    <div id="main"></div>
                     </td>
                     </tr>
                     </td>
                   </tr>
                     </table>
-                    <div id="estaciones">a</div>
+                    <div id="estaciones"></div>
                     <div id="menu">
                         <a data-icon="flat-checkround" data-theme="f" href="#second-page" data-role="button" >Calculadora de Riego</a>
                    <!--     <a data-icon="flat-time" data-theme="f" href="#due-page"  data-role="button">Fake Btn</a>  -->
