@@ -9,13 +9,16 @@ and open the template in the editor.
 */
 
 .no {
-    background-image: url('images/no.png');
+    background-repeat:no-repeat;
+    background-image: url('../images/no.png');
 }
 .ok {
-    background-image: url('images/ok.png');
+    background-repeat:no-repeat;
+    background-image: url('../images/ok.png');
 }
 .estado {
     width: 24px;
     height: 24px;
-    float: right;
+    float: left;
+    
 }
