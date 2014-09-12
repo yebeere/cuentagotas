@@ -73,8 +73,8 @@ var menorDistancia= new Array(7);
 function ordenGPS(){
        // calculo la distancia de c/u de las EMA y lo guardo en MenorDistancia
        for (var i = 0; i < 7; i++) {
-                ema[i][5] = distance(ema[i][1],ema[i][2],-38.57,-68.36);
-                //ema[i][5] = distance(ema[i][1],ema[i][2],position.coords.latitude,position.coords.longitude);
+                //ema[i][5] = distance(ema[i][1],ema[i][2],-38.57,-68.36);
+                ema[i][5] = distance(ema[i][1],ema[i][2],position.coords.latitude,position.coords.longitude);
        }
         ema.sort(function(a,b) {
                             return a[5]- b[5];
@@ -82,6 +82,8 @@ function ordenGPS(){
        for (var i = 0; i < 7; i++) {         
          $("<option value='"+(i+1)+"'>"+ema[i][0]+"</option>").appendTo("#esta"); 
        }
+       $("#esta option[value=1]").attr("selected",true);
+
        //document.getElementById('estaciones').innerHTML = ema;         
 }
 

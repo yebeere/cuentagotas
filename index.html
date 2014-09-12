@@ -33,6 +33,9 @@
                        navigator.geolocation.getCurrentPosition(onSuccessGPS, onErrorGPS);
                       // buscardatosHistoricos();
                    }
+               function resultado(){
+                   document.getElementById('estaciones').innerHTML = document.getElementById('esta').selectedIndex;
+               }    
         </script>
         <title>CuentaGOTAS</title>
     </head>
@@ -70,14 +73,14 @@
                     <div id="estaciones">
                               <fieldset class="ui-field-contain" data-theme="f" >
                                 <label for="day">Estaciones</label>
-                                <select name="esta" id="esta">
-                                  
+                                <select name="esta" id="esta" onchange="resultado()">
+                                <option value="">Estación Meteorológica</option>  
                                 </select>
                               </fieldset>
                     </div>
                     
                     
-                    
+                    <div id="resul"></div>
                     <div id="menu">
                         <a data-icon="flat-checkround" data-theme="f" href="#second-page" data-role="button" >Calculadora de Riego</a>
                    <!--     <a data-icon="flat-time" data-theme="f" href="#due-page"  data-role="button">Fake Btn</a>  -->
