@@ -70,7 +70,7 @@ function distance(lat1,lon1,lat2,lon2) {
 	return d;
 }
 var menorDistancia= new Array(7);
-function ordenGPS(){
+function ordenGPS(position){
        // calculo la distancia de c/u de las EMA y lo guardo en MenorDistancia
        for (var i = 0; i < 7; i++) {
                 //ema[i][5] = distance(ema[i][1],ema[i][2],-38.57,-68.36);
@@ -90,12 +90,12 @@ function ordenGPS(){
     
 
   var onSuccessGPS = function(position) {
-                //    var distancia=distance(ema[1][1],ema[1][2],position.coords.latitude,position.coords.longitude)
+               //   var distancia=distance(ema[1][1],ema[1][2],position.coords.latitude,position.coords.longitude)
 //                    alert('Latitude: ' + position.coords.latitude + '\n' +
 //                    'Longitude: ' + position.coords.longitude + '\n'+
 //                    'Distancia: '+distancia+' km \n') ;
                     document.getElementById('gps').className = 'estado ok';
-                    ordenGPS();
+                    ordenGPS(position);
                     
             }
             // onError Callback receives a PositionError object
