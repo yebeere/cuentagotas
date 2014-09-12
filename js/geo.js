@@ -79,7 +79,10 @@ function ordenGPS(){
         ema.sort(function(a,b) {
                             return a[5]- b[5];
                 });
-       document.getElementById('estaciones').innerHTML = ema;         
+       for (var i = 0; i < 7; i++) {         
+         $("<option value='"+(i+1)+"'>"+ema[i][0]+"</option>").appendTo("#esta"); 
+       }
+       //document.getElementById('estaciones').innerHTML = ema;         
 }
 
     
