@@ -82,7 +82,7 @@ function ordenGPS(){
        for (var i = 0; i < 7; i++) {         
          $("<option value='"+(i+1)+"'>"+ema[i][0]+"</option>").appendTo("#esta"); 
        }
-       $("#esta option[value=1]").attr("selected",true);
+       //$("#esta option[value=1]").attr("selected",true);
 
        //document.getElementById('estaciones').innerHTML = ema;         
 }
