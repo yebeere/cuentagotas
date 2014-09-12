@@ -89,7 +89,7 @@ function ordenGPS(){
 //                    'Longitude: ' + position.coords.longitude + '\n'+
 //                    'Distancia: '+distancia+' km \n') ;
                     document.getElementById('gps').className = 'estado ok';
-                    
+                    ordenGPS();
                     
             }
             // onError Callback receives a PositionError object
