@@ -104,7 +104,7 @@ function ordenGPS(position){
                                         return a[5]- b[5];
                             });
                    document.getElementById('estaciones').innerHTML = ema;  
-                    
+                   document.getElementById('resul').innerHTML = 'lat:'+position.coords.latitude+'<br/>Long:'+position.coords.longitude;
     }
             // onError Callback receives a PositionError object
             //
