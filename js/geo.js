@@ -103,8 +103,14 @@ function ordenGPS(position){
                     ema.sort(function(a,b) {
                                         return a[5]- b[5];
                             });
-                   document.getElementById('estaciones').innerHTML = ema;  
-                   document.getElementById('resul').innerHTML = 'lat:'+position.coords.latitude+'<br/>Long:'+position.coords.longitude;
+                  // document.getElementById('estaciones').innerHTML = ema;  
+                  // document.getElementById('resul').innerHTML = 'lat:'+position.coords.latitude+'<br/>Long:'+position.coords.longitude;
+                  
+                   for (var i = 0; i < 7; i++) {         
+                      $("<option value='"+(i+1)+"'>"+ema[i][0]+"</option>").appendTo("#esta"); 
+                    }
+                    $("#esta option[value=1]").attr("selected",true);
+
     }
             // onError Callback receives a PositionError object
             //
@@ -112,6 +118,10 @@ function ordenGPS(position){
 //                        alert('code: ' + error.code + '\n' +
 //                        'message: ' + error.message + '\n');
                          document.getElementById('gps').className = 'estado no';
-                         document.getElementById('estaciones').innerHTML = ema;
+                         //document.getElementById('estaciones').innerHTML = ema;
+                   for (var i = 0; i < 7; i++) {         
+                      $("<option value='"+(i+1)+"'>"+ema[i][0]+"</option>").appendTo("#esta"); 
+                    }
+                    $("#esta option[value=1]").attr("selected",true);                         
                     }
 
