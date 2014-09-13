@@ -96,9 +96,16 @@ function ordenGPS(position){
 //                    'Longitude: ' + position.coords.longitude + '\n'+
 //                    'Distancia: '+distancia+' km \n') ;
                     document.getElementById('gps').className = 'estado ok';
-                    ordenGPS(position);
+                    for (var i = 0; i < 7; i++) {
+                        // ema[i][5] = distance(ema[i][1],ema[i][2],-38.57,-68.36);
+                        ema[i][5] = distance(ema[i][1],ema[i][2],position.coords.latitude,position.coords.longitude);
+                    }
+                    ema.sort(function(a,b) {
+                                        return a[5]- b[5];
+                            });
+                   document.getElementById('estaciones').innerHTML = ema;  
                     
-            }
+    }
             // onError Callback receives a PositionError object
             //
     function onErrorGPS(error) {
