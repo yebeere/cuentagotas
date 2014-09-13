@@ -107,7 +107,7 @@ function ordenGPS(position){
                   // document.getElementById('resul').innerHTML = 'lat:'+position.coords.latitude+'<br/>Long:'+position.coords.longitude;
                   
                    for (var i = 0; i < 7; i++) {         
-                      $("<option value='"+(i+1)+"'>"+ema[i][0]+"</option>").appendTo("#esta"); 
+                      $("<option value='"+i+"'>"+ema[i][0]+"</option>").appendTo("#esta"); 
                     }
                     $("#esta option[value=1]").attr("selected",true);
 
@@ -120,7 +120,7 @@ function ordenGPS(position){
                          document.getElementById('gps').className = 'estado no';
                          //document.getElementById('estaciones').innerHTML = ema;
                    for (var i = 0; i < 7; i++) {         
-                      $("<option value='"+(i+1)+"'>"+ema[i][0]+"</option>").appendTo("#esta"); 
+                      $("<option value='"+i+"'>"+ema[i][0]+"</option>").appendTo("#esta"); 
                     }
                     $("#esta option[value=1]").attr("selected",true);                         
                     }
