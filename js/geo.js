@@ -119,9 +119,7 @@ function ordenGPS(position){
 //                        opt.innerHTML = ema[i][0];
 //                        select.appendChild(opt);
 //                    }
-                   for (var i = 0; i<=7; i++){
-                        createRadioElement(ema[i][0],false);
-                   }
+                  
 
     }
             // onError Callback receives a PositionError object
@@ -141,21 +139,3 @@ function ordenGPS(position){
                     }
     }
     
-    function createRadioElement( name, checked ) {
-   var radioInput;
-   try {
-        var radioHtml = '<input type="radio" name="' + name + '"';
-        if ( checked ) {
-            radioHtml += ' checked="checked"';
-        }
-        radioHtml += '/>';
-        radioInput = document.createElement(radioHtml);
-    } catch( err ) {
-        radioInput = document.createElement('input');
-        radioInput.setAttribute('type', 'radio');
-        radioInput.setAttribute('name', name);
-        if ( checked ) {
-            radioInput.setAttribute('checked', 'checked');
-        }
-    }
-    return radioInput;}
