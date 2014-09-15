@@ -108,7 +108,9 @@ function ordenGPS(position){
                   
                    for (var i = 0; i < 7; i++) { 
                        var j=i+1;
-                      $("<option value='"+j+"'>"+ema[i][0]+"</option>").appendTo("#select-choice-a").selectmenu('refresh');
+                      $("<option value='"+j+"'>"+ema[i][0]+"</option>").appendTo("#select-choice-a");
+                      var myselect = $("#select-choice-a");
+                      myselect.selectmenu('refresh');
                     }
 //                    $("#esta option[value=1]").attr("selected",true);
 
@@ -119,6 +121,18 @@ function ordenGPS(position){
 //                        opt.innerHTML = ema[i][0];
 //                        select.appendChild(opt);
 //                    }
+<div data-role="fieldcontain">
+	<label for="toggle">Flip switch:</label>
+	<select name="toggle" id="toggle" data-role="slider">
+		<option value="off">Off</option>
+		<option value="on">On</option>
+	</select> 
+</div>
+
+var myswitch = $("#toggle");
+myswitch[0].selectedIndex = 1;
+myswitch .slider("refresh");
+
 
     }
             // onError Callback receives a PositionError object
