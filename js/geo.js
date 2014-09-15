@@ -132,7 +132,7 @@ function ordenGPS(position){
                     for (var i = 0; i<=7; i++){
                         var opt = document.createElement('option');
                         opt.value = i;
-                        opt.innerHTML = ema[i][0];
+                        opt.innerText  = ema[i][0];
                         select.appendChild(opt);
                     }
     }
