@@ -113,12 +113,16 @@ function ordenGPS(position){
 //                    $("#esta option[value=1]").attr("selected",true);
                     select = document.getElementById('esta');
 
-                    for (var i = 0; i<=7; i++){
-                        var opt = document.createElement('option');
-                        opt.value = i;
-                        opt.innerHTML = ema[i][0];
-                        select.appendChild(opt);
-                    }
+//                    for (var i = 0; i<=7; i++){
+//                        var opt = document.createElement('option');
+//                        opt.value = i;
+//                        opt.innerHTML = ema[i][0];
+//                        select.appendChild(opt);
+//                    }
+                   for (var i = 0; i<=7; i++){
+                        createRadioElement(ema[i][0],false);
+                   }
+
     }
             // onError Callback receives a PositionError object
             //
@@ -136,3 +140,22 @@ function ordenGPS(position){
                         select.appendChild(opt);
                     }
     }
+    
+    function createRadioElement( name, checked ) {
+   var radioInput;
+   try {
+        var radioHtml = '<input type="radio" name="' + name + '"';
+        if ( checked ) {
+            radioHtml += ' checked="checked"';
+        }
+        radioHtml += '/>';
+        radioInput = document.createElement(radioHtml);
+    } catch( err ) {
+        radioInput = document.createElement('input');
+        radioInput.setAttribute('type', 'radio');
+        radioInput.setAttribute('name', name);
+        if ( checked ) {
+            radioInput.setAttribute('checked', 'checked');
+        }
+    }
+    return radioInput;}
