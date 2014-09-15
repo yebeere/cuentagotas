@@ -124,10 +124,8 @@ function ordenGPS(position){
 //                        'message: ' + error.message + '\n');
                          document.getElementById('gps').className = 'estado no';
                          //document.getElementById('estaciones').innerHTML = ema;
-                   for (var i = 0; i < 7; i++) {         
-                      var j=i+1; 
-                      $("<option value='"+j+"'>"+ema[i][0]+"</option>").appendTo("#esta"); 
-                    }
-                    $("#esta option[value=1]").attr("selected",true);                         
-                    }
-
+                        var x = document.getElementById("esta");
+                            var option = document.createElement("option");
+                            option.text = ema[1][0];
+                            x.add(option,x[1]);
+    }
