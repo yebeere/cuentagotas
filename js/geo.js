@@ -106,20 +106,19 @@ function ordenGPS(position){
                   // document.getElementById('estaciones').innerHTML = ema;  
                   // document.getElementById('resul').innerHTML = 'lat:'+position.coords.latitude+'<br/>Long:'+position.coords.longitude;
                   
-//                   for (var i = 0; i < 7; i++) { 
-//                       var j=i+1;
-//                      $("<option value='"+j+"'>"+ema[i][0]+"</option>").appendTo("#esta"); 
-//                    }
-//                    $("#esta option[value=1]").attr("selected",true);
-                    select = document.getElementById('select-choice-a');
-
-                    for (var i = 0; i<=7; i++){
-                        var opt = document.createElement('option');
-                        opt.value = i+2;
-                        opt.innerHTML = ema[i][0];
-                        select.appendChild(opt);
+                   for (var i = 0; i < 7; i++) { 
+                       var j=i+1;
+                      $("<option value='"+j+"'>"+ema[i][0]+"</option>").appendTo("#select-choice-a").selectmenu('refresh');
                     }
-                  
+//                    $("#esta option[value=1]").attr("selected",true);
+
+//                    select = document.getElementById('select-choice-a');
+//                    for (var i = 0; i<=7; i++){
+//                        var opt = document.createElement('option');
+//                        opt.value = i+2;
+//                        opt.innerHTML = ema[i][0];
+//                        select.appendChild(opt);
+//                    }
 
     }
             // onError Callback receives a PositionError object
