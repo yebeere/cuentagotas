@@ -112,12 +112,9 @@ function ordenGPS(position){
 //                    }
 //                    $("#esta option[value=1]").attr("selected",true);
                         var x = document.getElementById("esta");
-                         for (var i = 0; i < 7; i++) {
                             var option = document.createElement("option");
-                            j=i*1;
-                            option.text = ema[i][0];
-                            x.add(option,x[i]);
-                        }
+                            option.text = ema[1][0];
+                            x.add(option,x[1]);
 
     }
             // onError Callback receives a PositionError object
