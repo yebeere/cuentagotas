@@ -111,14 +111,14 @@ function ordenGPS(position){
 //                      $("<option value='"+j+"'>"+ema[i][0]+"</option>").appendTo("#esta"); 
 //                    }
 //                    $("#esta option[value=1]").attr("selected",true);
-                    select = document.getElementById('esta');
+                    select = document.getElementById('select-choice-a');
 
-//                    for (var i = 0; i<=7; i++){
-//                        var opt = document.createElement('option');
-//                        opt.value = i;
-//                        opt.innerHTML = ema[i][0];
-//                        select.appendChild(opt);
-//                    }
+                    for (var i = 0; i<=7; i++){
+                        var opt = document.createElement('option');
+                        opt.value = i+2;
+                        opt.innerHTML = ema[i][0];
+                        select.appendChild(opt);
+                    }
                   
 
     }
