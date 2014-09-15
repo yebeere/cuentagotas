@@ -108,7 +108,7 @@ function ordenGPS(position){
                   
                    for (var i = 0; i < 7; i++) { 
                        var j=i+1;
-                      $("<option value='"+j+"'>"+ema[i][0]+"</option>").appendTo("#select-choice-a");
+                      $("<option value='"+j+"'>"+ema[i][0]+" - Dist:"+ema[i][5]+"km </option>").appendTo("#select-choice-a");
                       var myselect = $("#select-choice-a");
                       myselect.selectmenu('refresh');
                     }
@@ -135,11 +135,14 @@ function ordenGPS(position){
                          //document.getElementById('estaciones').innerHTML = ema;
                         select = document.getElementById('esta');
 
-                    for (var i = 0; i<=7; i++){
-                        var opt = document.createElement('option');
-                        opt.value = i;
-                        opt.innerText  = ema[i][0];
-                        select.appendChild(opt);
+                     for (var i = 0; i < 7; i++) { 
+                       var j=i+1;
+                      $("<option value='"+j+"'>"+ema[i][0]+" - Dist:"+ema[i][5]+"km </option>").appendTo("#select-choice-a");
+                      var myselect = $("#select-choice-a");
+                      myselect.selectmenu('refresh');
                     }
+                   $("#esta option[value=1]").attr("selected",true);
+                   var myselect = $("#select-choice-a");
+                    myselect.selectmenu('refresh');
     }
     
