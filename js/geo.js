@@ -111,11 +111,14 @@ function ordenGPS(position){
 //                      $("<option value='"+j+"'>"+ema[i][0]+"</option>").appendTo("#esta"); 
 //                    }
 //                    $("#esta option[value=1]").attr("selected",true);
-                        var x = document.getElementById("esta");
-                            var option = document.createElement("option");
-                            option.text = ema[1][0];
-                            x.add(option,x[1]);
+                    select = document.getElementById('esta');
 
+                    for (var i = 0; i<=7; i++){
+                        var opt = document.createElement('option');
+                        opt.value = i;
+                        opt.innerHTML = ema[i][0];
+                        select.appendChild(opt);
+                    }
     }
             // onError Callback receives a PositionError object
             //
@@ -124,8 +127,12 @@ function ordenGPS(position){
 //                        'message: ' + error.message + '\n');
                          document.getElementById('gps').className = 'estado no';
                          //document.getElementById('estaciones').innerHTML = ema;
-                        var x = document.getElementById("esta");
-                            var option = document.createElement("option");
-                            option.text = ema[1][0];
-                            x.add(option,x[1]);
+                        select = document.getElementById('esta');
+
+                    for (var i = 0; i<=7; i++){
+                        var opt = document.createElement('option');
+                        opt.value = i;
+                        opt.innerHTML = ema[i][0];
+                        select.appendChild(opt);
+                    }
     }
