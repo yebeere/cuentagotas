@@ -112,7 +112,9 @@ function ordenGPS(position){
                       var myselect = $("#select-choice-a");
                       myselect.selectmenu('refresh');
                     }
-//                    $("#esta option[value=1]").attr("selected",true);
+                   $("#esta option[value=1]").attr("selected",true);
+                   var myselect = $("#select-choice-a");
+                    myselect.selectmenu('refresh');
 
 //                    select = document.getElementById('select-choice-a');
 //                    for (var i = 0; i<=7; i++){
