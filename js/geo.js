@@ -19,19 +19,19 @@ for (var i = 0; i < 7; i++) {
    ema[0][3] =282;
    ema[0][4] ='http://anterior.inta.gov.ar/altovalle/cincosaltos/downld02.txt';
    
-   ema[1][0] ='Contralmirante Guerrico';
+   ema[1][0] ='Cnte Guerrico';
    ema[1][1] =-39.026;
    ema[1][2] =-67.737;
    ema[1][3] =242;
    ema[1][4] ='http://anterior.inta.gov.ar/altovalle/met/downld02.txt';
    
-   ema[2][0] ='Picún Leufú';
+   ema[2][0] ='Picún Leufú  ';
    ema[2][1] =-39.536;
    ema[2][2] =-69.298;
    ema[2][3] =393;
    ema[2][4] ='http://anterior.inta.gov.ar/altovalle/picunleufu/downld02.txt';
 
-   ema[3][0] ='Coronel Belisle';
+   ema[3][0] ='Cnel. Belisle';
    ema[3][1] =-39.197;
    ema[3][2] =-65.894;
    ema[3][3] =128;
@@ -49,7 +49,7 @@ for (var i = 0; i < 7; i++) {
    ema[5][3] =158;
    ema[5][4] ='http://anterior.inta.gov.ar/altovalle/regina/downld02.txt';   
  
-   ema[6][0] ='San Patricio del Chañar';
+   ema[6][0] ='San P.Chañar';
    ema[6][1] =-38.57;
    ema[6][2] =-68.36;
    ema[6][3] =334;
@@ -107,12 +107,12 @@ function ordenGPS(position){
                   // document.getElementById('resul').innerHTML = 'lat:'+position.coords.latitude+'<br/>Long:'+position.coords.longitude;
                   
                    for (var i = 0; i < 7; i++) { 
-                       var j=i+1;
-                      $("<option value='"+j+"'>"+ema[i][0]+" - Dist:"+ema[i][5]+"km </option>").appendTo("#select-choice-a");
+                       var j=i;
+                      $("<option value='"+j+"'>"+ema[i][0]+"(Dist:"+round(ema[i][5]) +" km) </option>").appendTo("#select-choice-a");
                       var myselect = $("#select-choice-a");
                       myselect.selectmenu('refresh');
                     }
-                   $("#esta option[value=1]").attr("selected",true);
+                   $("#esta option[value=0]").attr("selected",true);
                    var myselect = $("#select-choice-a");
                     myselect.selectmenu('refresh');
 
@@ -136,12 +136,12 @@ function ordenGPS(position){
                         select = document.getElementById('esta');
 
                      for (var i = 0; i < 7; i++) { 
-                       var j=i+1;
-                      $("<option value='"+j+"'>"+ema[i][0]+" - Dist:"+ema[i][5]+"km </option>").appendTo("#select-choice-a");
+                       var j=i;
+                      $("<option value='"+j+"'>"+ema[i][0]+"(Dist:"+round(ema[i][5]) +" km) </option>").appendTo("#select-choice-a");
                       var myselect = $("#select-choice-a");
                       myselect.selectmenu('refresh');
-                    }
-                   $("#esta option[value=1]").attr("selected",true);
+                      }
+                    $("#esta option[value=0]").attr("selected",true);
                    var myselect = $("#select-choice-a");
                     myselect.selectmenu('refresh');
     }
