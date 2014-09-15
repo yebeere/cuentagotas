@@ -77,17 +77,24 @@
                     </select>
                     </div>
                   -->
-                    <div data-role="controlgroup">
-                        <legend>Estaciones</legend>
-                        <label for="menuNative1">Native menu, single selection</label>
-                        <input type="radio" id="menuNative1" name="menuType" value="1">
-                        <label for="menuNative2">Native menu, multiple selection</label>
-                        <input type="radio" id="menuNative2" name="menuType" value="2">
-                        <label for="menuNonNative1">Non-native menu, single selection</label>
-                        <input type="radio" id="menuNonNative1" name="menuType" value="3">
-                        <label for="menuNonNative2">Non-native menu, multiple selection</label>
-                        <input type="radio" id="menuNonNative2" name="menuType" value="4">
-                    </div>
+                    <div class="ui-field-contain ui-body ui-br" data-role="fieldcontain">
+                            <label class="select ui-select" for="select-choice-a">Choose shipping method:</label>
+                            <div class="ui-select">
+                            <a class="ui-btn ui-btn-icon-right ui-btn-corner-all ui-shadow ui-btn-up-c" href="#" role="button" aria-haspopup="true" data-theme="c">
+                            <span class="ui-btn-inner ui-btn-corner-all">
+                            <span class="ui-btn-text">Custom menu example</span>
+                            <span class="ui-icon ui-icon-arrow-d ui-icon-shadow"></span>
+                            </span>
+                            </a>
+                            <select id="select-choice-a" data-native-menu="false" name="select-choice-a" tabindex="-1">
+                            <option>Custom menu example</option>
+                            <option value="standard">Standard: 7 day</option>
+                            <option value="rush">Rush: 3 days</option>
+                            <option value="express">Express: next day</option>
+                            <option value="overnight">Overnight</option>
+                            </select>
+                            </div>
+                            </div>
                     
                     <div id="resul"></div>
                     <div id="menu">
@@ -103,8 +110,19 @@
               </div>
             </div><!-- /page  -->
             <!-- /Segunda pagina  -->
-            
-
+            <div data-role="page" id="second-page" data-title="This is the second page">
+                <div data-role="header">
+                    <h1>Second page</h1>
+                </div>
+                <div data-role="content">
+                    <p>Contenidode la segunda pagina</p>
+                    <p>Volver a la pagina inicial, <a href="#home-page">Vuelta</a>
+                    
+                </div>
+                <div data-role="footer">
+                    <h4>pie de segunda pagina</h4>
+                </div>
+                </div>
 
            
         </div>
