@@ -121,17 +121,6 @@ function ordenGPS(position){
 //                        opt.innerHTML = ema[i][0];
 //                        select.appendChild(opt);
 //                    }
-<div data-role="fieldcontain">
-	<label for="toggle">Flip switch:</label>
-	<select name="toggle" id="toggle" data-role="slider">
-		<option value="off">Off</option>
-		<option value="on">On</option>
-	</select> 
-</div>
-
-var myswitch = $("#toggle");
-myswitch[0].selectedIndex = 1;
-myswitch .slider("refresh");
 
 
     }
