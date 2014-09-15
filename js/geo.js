@@ -115,7 +115,7 @@ function ordenGPS(position){
 
                     for (var i = 0; i<=7; i++){
                         var opt = document.createElement('option');
-                        opt.value = i+1;
+                        opt.value = i+2;
                         opt.innerHTML = ema[i][0];
                         select.appendChild(opt);
                     }
