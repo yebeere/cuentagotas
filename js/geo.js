@@ -106,11 +106,18 @@ function ordenGPS(position){
                   // document.getElementById('estaciones').innerHTML = ema;  
                   // document.getElementById('resul').innerHTML = 'lat:'+position.coords.latitude+'<br/>Long:'+position.coords.longitude;
                   
-                   for (var i = 0; i < 7; i++) { 
-                       var j=i+1;
-                      $("<option value='"+j+"'>"+ema[i][0]+"</option>").appendTo("#esta"); 
-                    }
-                    $("#esta option[value=1]").attr("selected",true);
+//                   for (var i = 0; i < 7; i++) { 
+//                       var j=i+1;
+//                      $("<option value='"+j+"'>"+ema[i][0]+"</option>").appendTo("#esta"); 
+//                    }
+//                    $("#esta option[value=1]").attr("selected",true);
+                        var x = document.getElementById("esta");
+                         for (var i = 0; i < 7; i++) {
+                            var option = document.createElement("option");
+                            j=i*1;
+                            option.text = ema[i][0];
+                            x.add(option,x[i]);
+                        }
 
     }
             // onError Callback receives a PositionError object
