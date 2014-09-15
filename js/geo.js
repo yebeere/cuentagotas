@@ -108,7 +108,7 @@ function ordenGPS(position){
                   
                    for (var i = 0; i < 7; i++) { 
                        var j=i;
-                      $("<option value='"+j+"'>"+ema[i][0]+"(Dist:"+round(ema[i][5]) +" km) </option>").appendTo("#select-choice-a");
+                      $("<option value='"+j+"'>"+ema[i][0]+"(Dist:"+ema[i][5] +" km) </option>").appendTo("#select-choice-a");
                       var myselect = $("#select-choice-a");
                       myselect.selectmenu('refresh');
                     }
@@ -140,8 +140,8 @@ function ordenGPS(position){
                       $("<option value='"+j+"'>"+ema[i][0]+"(Dist:"+round(ema[i][5]) +" km) </option>").appendTo("#select-choice-a");
                       var myselect = $("#select-choice-a");
                       myselect.selectmenu('refresh');
-                      }
-                    $("#esta option[value=0]").attr("selected",true);
+                    }
+                   $("#esta option[value=0]").attr("selected",true);
                    var myselect = $("#select-choice-a");
                     myselect.selectmenu('refresh');
     }
