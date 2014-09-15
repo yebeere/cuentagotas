@@ -71,12 +71,23 @@
                     </td>
                   </tr>
                     </table>
-                    <div id="estaciones">
+                  <!--  <div id="estaciones">
                     <label for="esta">Estaciones Meteorológicas</label>
                     <select id="esta" data-native-menu="false" data-theme="f">
                     </select>
                     </div>
-                    
+                  -->
+                    <div data-role="controlgroup">
+                        <legend>Estaciones</legend>
+                        <label for="menuNative1">Native menu, single selection</label>
+                        <input type="radio" id="menuNative1" name="menuType" value="1">
+                        <label for="menuNative2">Native menu, multiple selection</label>
+                        <input type="radio" id="menuNative2" name="menuType" value="2">
+                        <label for="menuNonNative1">Non-native menu, single selection</label>
+                        <input type="radio" id="menuNonNative1" name="menuType" value="3">
+                        <label for="menuNonNative2">Non-native menu, multiple selection</label>
+                        <input type="radio" id="menuNonNative2" name="menuType" value="4">
+                    </div>
                     
                     <div id="resul"></div>
                     <div id="menu">
